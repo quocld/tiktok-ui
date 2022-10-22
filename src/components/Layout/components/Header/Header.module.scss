@@ -78,6 +78,9 @@
     color: rgba(22, 24, 35, 0.35);
 }
 .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 52px;
     border-top-right-radius: var(--search-border-radius);
     border-bottom-right-radius: var(--search-border-radius);
