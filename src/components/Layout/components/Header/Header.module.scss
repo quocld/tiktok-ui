@@ -105,10 +105,12 @@
 }
 
 .action-btn {
+    position: relative;
+    display: flex;
     font-size: 2.2rem;
     background-color: transparent;
     color: #161823;
-    padding: 4px 12px;
+    padding: 4px 10px;
     cursor: pointer;
 }
 
@@ -118,6 +120,21 @@
     margin-left: 28px;
     background-color: #fff;
     cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    padding: 0px 6px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    font-family: 'ProximaNova', sans-serif;
+    background-color: var(--primary);
 }
 
 .user-avatar {

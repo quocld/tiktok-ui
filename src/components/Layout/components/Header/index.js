@@ -14,6 +14,8 @@ import {
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { useState, useEffect } from 'react';
+
 import Tippy from '@tippyjs/react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css'; // optional
@@ -63,13 +65,13 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    /*  const [searchResult, setSearchResult] = useState([]);
+    const [searchResult, setSearchResult] = useState([]);
 
     useEffect(() => {
         setTimeout(() => {
-            setSearchResult([]);
+            setSearchResult([1, 2, 3, 1]);
         }, 0);
-    }, []); */
+    }, []);
 
     //Handle logic
     const handleMenuChange = (menuItem) => {
@@ -112,7 +114,7 @@ function Header() {
                 <img src={images.logo} alt="Tiktok" />
                 <HeadlessTippy
                     interactive
-                    //visible={searchResult.length > 0}
+                    visible={searchResult.length > 0}
                     render={(attrs) => (
                         <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                             <PopperWrapper>
@@ -156,6 +158,7 @@ function Header() {
                             <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <InboxIcon />
+                                    <span className={cx('badge')}>12</span>
                                 </button>
                             </Tippy>
                         </>
